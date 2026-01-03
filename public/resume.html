@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raghav Narang - Resume</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.5;
+      color: #1a1a1a;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background: white;
+    }
+
+    @media print {
+      body {
+        padding: 20px;
+        font-size: 11pt;
+      }
+      .no-print {
+        display: none;
+      }
+    }
+
+    header {
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 13px;
+      color: #444;
+    }
+
+    .contact a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1a1a1a;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
+    }
+
+    .summary {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 8px 16px;
+      font-size: 13px;
+    }
+
+    .skills-label {
+      color: #666;
+      font-weight: 500;
+    }
+
+    .skills-list {
+      color: #333;
+    }
+
+    .experience-item {
+      margin-bottom: 16px;
+    }
+
+    .experience-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .company {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .dates {
+      font-size: 12px;
+      color: #666;
+    }
+
+    .title {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 4px;
+    }
+
+    .description {
+      font-size: 13px;
+      color: #444;
+    }
+
+    .award {
+      font-size: 12px;
+      color: #b45309;
+      margin-top: 4px;
+    }
+
+    .project {
+      margin-bottom: 12px;
+    }
+
+    .project:last-child {
+      margin-bottom: 0;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .project-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .project-name a {
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+
+    .project-description {
+      font-size: 13px;
+      color: #444;
+      margin: 4px 0;
+    }
+
+    .project-highlights {
+      font-size: 12px;
+      color: #666;
+      padding-left: 16px;
+    }
+
+    .project-highlights li {
+      margin-bottom: 2px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .tag {
+      font-size: 11px;
+      background: #f3f4f6;
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: #444;
+    }
+
+    .education-item {
+      font-size: 14px;
+    }
+
+    .education-institution {
+      font-weight: 600;
+    }
+
+    .education-details {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .opensource-list {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .opensource-item {
+      font-size: 13px;
+    }
+
+    .opensource-item a {
+      color: #1a1a1a;
+      text-decoration: none;
+    }
+
+    .opensource-item a:hover {
+      text-decoration: underline;
+    }
+
+    .print-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #1a1a1a;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .print-btn:hover {
+      background: #333;
+    }
+  </style>
+</head>
+<body>
+  <button class="print-btn no-print" onclick="window.print()">Print / Save as PDF</button>
+
+  <header>
+    <h1>Raghav Narang</h1>
+    <div class="subtitle">Senior Software Engineer</div>
+    <div class="contact">
+      <span>+91-8437661855</span>
+      <span>|</span>
+      <span>raghavvnarang@gmail.com</span>
+      <span>|</span>
+      <a href="https://github.com/raghavnarang" target="_blank">github.com/raghavnarang</a>
+      <span>|</span>
+      <a href="https://linkedin.com/in/raghavnarang" target="_blank">linkedin.com/in/raghavnarang</a>
+      <span>|</span>
+      <span>Amritsar, India</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>Summary</h2>
+    <p class="summary">
+      10+ years building fast, scalable web applications. Specializing in React and Next.js with a focus on clean, optimized code. Currently expanding into Golang and Java. Available for freelance projects.
+    </p>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span class="skills-label">Frontend</span>
+      <span class="skills-list">React.js, Next.js, TypeScript, Tailwind CSS, Redux.js, Storybook</span>
+      <span class="skills-label">Backend</span>
+      <span class="skills-list">Node.js, Golang, Java, PHP, PostgreSQL</span>
+      <span class="skills-label">Testing</span>
+      <span class="skills-list">Jest, Playwright, Karate</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <span class="company">Proximity Works (JioHotstar)</span>
+        <span class="dates">Nov 2024 - Present</span>
+      </div>
+      <div class="title">Senior Frontend Engineer</div>
+      <div class="description">Building features for India's largest OTT platform serving millions of daily active users. Leading frontend developers and ensuring platform stability.</div>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <span class="company">Proximity Works (JioHotstar)</span>
+        <span class="dates">Dec 2021 - Nov 2024</span>
+      </div>
+      <div class="title">Frontend Engineer</div>
+      <div class="description">Built Guest User Experience, Profiles 3.0 with parabolic CSS animations, Parental Lock, and Maturity Ratings. Led Disney+ Hotstar to JioHotstar migration. Implemented Next.js & Cloudinary-based image optimization.</div>
+      <div class="award">Above and Beyond Award (2023)</div>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <span class="company">WiseTR (FunnelKit)</span>
+        <span class="dates">Oct 2019 - Nov 2021</span>
+      </div>
+      <div class="title">Full Stack Developer</div>
+      <div class="description">Built world's first WooCommerce-based CRM plugin. Improved email broadcast from 15 to 70 emails/sec. Led team of 3 developers.</div>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <span class="company">Peer Infotech</span>
+        <span class="dates">Jul 2018 - Sep 2019</span>
+      </div>
+      <div class="title">Full Stack Developer</div>
+      <div class="description">Developed 50+ WordPress sites. Optimized PageSpeed scores and led team of 2 developers.</div>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <span class="company">Freelance</span>
+        <span class="dates">Jan 2017 - Jun 2018</span>
+      </div>
+      <div class="title">Web Developer</div>
+      <div class="description">Built React Native e-commerce app with WooCommerce, taxi booking module with Kotlin & Firebase, and audio streaming platform with SoundCloud API.</div>
+    </div>
+
+    <div class="experience-item">
+      <div class="experience-header">
+        <span class="company">WANDR</span>
+        <span class="dates">Jan 2015 - Dec 2016</span>
+      </div>
+      <div class="title">WordPress Developer</div>
+      <div class="description">Remote for LA-based UI/UX agency. Built custom themes and WooCommerce shipping integration with Shippo API.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Featured Project</h2>
+    <div class="project">
+      <div class="project-header">
+        <span class="project-name"><a href="https://nutflick.com" target="_blank">Nutflick.com</a></span>
+        <span class="dates">2024</span>
+      </div>
+      <div class="project-description">Full-stack e-commerce platform built with Next.js 15 and Payload CMS. Achieved 99 Lighthouse performance score through SSG and advanced caching strategies.</div>
+      <ul class="project-highlights">
+        <li>99 Lighthouse performance score</li>
+        <li>Instant page loads with SSG</li>
+        <li>Full-stack with Payload CMS 3.0</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Next.js 15</span>
+        <span class="tag">Payload CMS</span>
+        <span class="tag">SSG</span>
+        <span class="tag">E-Commerce</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <div class="education-item">
+      <span class="education-institution">Guru Nanak Dev University</span>
+      <div class="education-details">B.Sc. Information Technology | 2011 - 2014</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Open Source Contributions</h2>
+    <div class="opensource-list">
+      <span class="opensource-item"><a href="https://github.com/WordPress/gutenberg/issues/26505" target="_blank">Gutenberg</a></span>
+      <span>|</span>
+      <span class="opensource-item"><a href="https://github.com/woocommerce/woocommerce/issues/5077" target="_blank">WooCommerce</a></span>
+      <span>|</span>
+      <span class="opensource-item"><a href="https://github.com/rubengc/flavor/issues/6" target="_blank">GamiPress</a></span>
+    </div>
+  </section>
+</body>
+</html>
