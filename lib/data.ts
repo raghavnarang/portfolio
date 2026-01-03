@@ -11,7 +11,7 @@ export const PROFILE = {
   availability: "Available for freelance",
   email: "raghavvnarang@gmail.com",
   github: "https://github.com/raghavnarang",
-  linkedin: "https://linkedin.com/in/raghavnarang",
+  linkedin: "https://www.linkedin.com/in/raghav-narang/",
   bio: `10+ years building fast, scalable web applications. Specializing in React and Next.js with a focus on clean, optimized code. Currently expanding into Golang and Java.`,
 };
 
