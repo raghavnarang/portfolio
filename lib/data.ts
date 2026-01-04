@@ -134,17 +134,19 @@ export const OPEN_SOURCE = [
 export const SEO = {
   title: "Raghav Narang - Senior Software Engineer",
   description:
-    "Senior Software Engineer with 9+ years of experience specializing in React, Next.js, and modern web development. Available for freelance projects.",
+    "Senior Software Engineer with 10+ years of experience building scalable web applications. Specializing in React, Next.js, and TypeScript. Currently at India's largest OTT platform.",
   keywords: [
     "Raghav Narang",
-    "Software Engineer",
+    "Senior Software Engineer",
     "React Developer",
     "Next.js Developer",
+    "TypeScript Developer",
     "Frontend Developer",
     "Full Stack Developer",
     "Freelance Developer",
+    "Tailwind CSS",
     "Web Developer India",
   ],
-  url: "https://raghavnarang.com", // Update with your actual domain
+  url: "https://raghavnarang.dev",
   image: "/avatar.jpg",
 };
