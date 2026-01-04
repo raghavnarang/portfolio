@@ -75,6 +75,46 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${SEO.url}/#person`,
+      name: PROFILE.name,
+      jobTitle: PROFILE.title,
+      description: SEO.description,
+      url: SEO.url,
+      image: `${SEO.url}${PROFILE.avatar}`,
+      email: `mailto:${PROFILE.email}`,
+      sameAs: [PROFILE.github, PROFILE.linkedin],
+      knowsAbout: [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Node.js",
+        "Web Development",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SEO.url}/#website`,
+      url: SEO.url,
+      name: PROFILE.name,
+      description: SEO.description,
+      author: { "@id": `${SEO.url}/#person` },
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": `${SEO.url}/#profilepage`,
+      url: SEO.url,
+      name: SEO.title,
+      mainEntity: { "@id": `${SEO.url}/#person` },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -84,6 +124,10 @@ export default function RootLayout({
     <html lang="en" className={`${jetbrainsMono.variable} dark`} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-2xl mb-40 flex flex-col mx-4 mt-8 sm:mt-12 lg:mx-auto`}
