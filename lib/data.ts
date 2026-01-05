@@ -118,16 +118,6 @@ export const OPEN_SOURCE = [
     description: "WordPress block editor",
     link: "https://github.com/WordPress/gutenberg/issues/26505",
   },
-  {
-    project: "WooCommerce",
-    description: "E-commerce platform",
-    link: "https://github.com/woocommerce/woocommerce/issues/5077",
-  },
-  {
-    project: "GamiPress",
-    description: "Gamification plugin",
-    link: "https://github.com/rubengc/flavor/issues/6",
-  },
 ];
 
 // SEO Metadata
